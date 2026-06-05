@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: project
+  name: project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: project
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: project
+    spec:
+      containers:
+      - image: abdul1s/jenkins-test:7
+        name: project
+        resources: {}
+status: {}
