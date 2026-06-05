@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo "Updating image tag to ${IMAGE_TAG}"
                 sh 'cat ./k8s/deployment.yaml'
-                // sed -i 's/jenkins-test.*/jenkins-test:${IMAGE_TAG}/g' ./k8s/deployment.yaml
+                sed -i 's/jenkins-test.*/jenkins-test:${IMAGE_TAG}/g' ./k8s/deployment.yaml
                 sh 'cat ./k8s/deployment.yaml'
             }
         }
