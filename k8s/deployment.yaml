@@ -16,7 +16,7 @@ spec:
         app: project
     spec:
       containers:
-      - image: abdul1s/jenkins-test:7
+      - image: abdul1s/jenkins-test:500
         name: project
         resources: {}
 status: {}
